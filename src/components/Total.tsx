@@ -1,4 +1,13 @@
-export function Total() {
+export function Total({getTotal}:any) {
+  function totalPrices(){
+    let price = getTotal()
+    let total = 0 
+
+    for(let price of prices){
+      total += price
+    }
+    return total
+  }
   return (
     <div className="total-section">
       <div>
@@ -6,7 +15,7 @@ export function Total() {
       </div>
 
       <div>
-        <span className="total-number">£0.00</span>
+        <span className="total-number">£{totalPrices().toFixed(2)}</span>
       </div>
     </div>
   );

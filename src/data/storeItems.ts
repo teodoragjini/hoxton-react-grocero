@@ -1,9 +1,9 @@
- type StoreItem = {
+export type StoreItem = {
   id: number;
   name: string;
   price: number;
   inCard: number;
-  path: string;
+  stock: number;
 };
 
 const storeItems: Array<StoreItem> = [
@@ -12,7 +12,7 @@ const storeItems: Array<StoreItem> = [
     name: "beetroot",
     price: 0.35,
     inCard: 0,
-    path: "assets/icons/001-beetroot.svg",
+    stock: 5,
   },
 
   {
@@ -20,7 +20,7 @@ const storeItems: Array<StoreItem> = [
     name: "carrot",
     price: 0.52,
     inCard: 0,
-    path: "assets/icons/002-carrot.svg",
+    stock: 7,
   },
 
   {
@@ -28,7 +28,7 @@ const storeItems: Array<StoreItem> = [
     name: "apple",
     price: 0.15,
     inCard: 0,
-    path: "assets/icons/003-apple.svg",
+    stock: 4,
   },
 
   {
@@ -36,7 +36,7 @@ const storeItems: Array<StoreItem> = [
     name: "apricot",
     price: 1.5,
     inCard: 0,
-    path: "assets/icons/004-apricot.svg",
+    stock: 2,
   },
 
   {
@@ -44,7 +44,7 @@ const storeItems: Array<StoreItem> = [
     name: "avocado",
     price: 2.5,
     inCard: 0,
-    path: "assets/icons/005-avocado.svg",
+    stock: 6,
   },
 
   {
@@ -52,7 +52,7 @@ const storeItems: Array<StoreItem> = [
     name: "bananas",
     price: 1.2,
     inCard: 0,
-    path: "assets/icons/006-bananas.svg",
+    stock: 3,
   },
 
   {
@@ -60,7 +60,7 @@ const storeItems: Array<StoreItem> = [
     name: "bell-pepper",
     price: 1.75,
     inCard: 0,
-    path: "assets/icons/007-bell-pepper.svg",
+    stock: 4,
   },
 
   {
@@ -68,7 +68,7 @@ const storeItems: Array<StoreItem> = [
     name: "berry",
     price: 1.75,
     inCard: 0,
-    path: "assets/icons/008-berry.svg",
+    stock: 5,
   },
 
   {
@@ -76,7 +76,7 @@ const storeItems: Array<StoreItem> = [
     name: "bluberry",
     price: 3.5,
     inCard: 0,
-    path: "assets/icons/009-blueberry.svg",
+    stock: 4,
   },
 
   {
@@ -84,7 +84,7 @@ const storeItems: Array<StoreItem> = [
     name: "eggplant",
     price: 2.15,
     inCard: 0,
-    path: "assets/icons/010-eggplant.svg",
+    stock: 8,
   },
 ];
 

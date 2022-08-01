@@ -1,15 +1,35 @@
-export function CartItem() {
+export function CartItem({
+  getItemImagePath,
+  storeItem,
+  decreaseQuantity,
+  increaseQuantity,
+}: any) {
   return (
     <li>
       <img
         className="cart--item-icon"
-        src="assets/icons/001-beetroot.svg"
+        src={getItemImagePath(storeItem)}
         alt="beetroot"
       />
-      <p>beetroot</p>
-      <button className="quantity-btn remove-btn center">-</button>
-      <span className="quantity-text center">1</span>
-      <button className="quantity-btn add-btn center">+</button>
+      <p>{storeItem.name}</p>
+      <button
+        className="quantity-btn remove-btn center"
+        onClick={() => {
+          decreaseQuantity(storeItem);
+        }}
+      >
+        -
+      </button>
+
+      <span className="quantity-text center">{storeItem.inCard}</span>
+      <button
+        className="quantity-btn add-btn center"
+        onClick={() => {
+          increaseQuantity(storeItem);
+        }}
+      >
+        +
+      </button>
     </li>
   );
 }
